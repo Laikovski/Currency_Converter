@@ -1,13 +1,19 @@
-import ast
+import requests
+import json
+user_input = input().lower()
+URL = f'http://www.floatrates.com/daily/{user_input}.json'
 
-currency = {
-    'RUB': 2.98,
-    'ARS': 0.82,
-    'HNL': 0.17,
-    'AUD': 1.9622,
-    'MAD': 0.208
-}
-insert = ast.literal_eval(input())
+def request(url):
+    r = requests.get(url.lower())
+    if r.status_code == 200:
+        res = json.loads(r.text)
+        return res
+    else:
+        print("Something went wrong, try again")
+request(URL)
 
-for item in currency:
-    print(f'I will get {round(currency[item] * insert, 2)} {item} from the sale of {insert} conicoins.')
+def get_info():
+    json_string = request(URL)
+    print(json_string['usd'])
+    print(json_string['eur'])
+get_info()
