@@ -1,5 +1,5 @@
+import ast
 # print('Meet a conicoin!')
-insert_coin = int(input())
-print(f'I have {insert_coin} conicoins.')
-print(f'{insert_coin} conicoins cost {insert_coin * 100} dollars.')
-print('I am rich! Yippee!')
+insert_coin = int(input('Please, enter the number of conicoins you have: '))
+insert_rate = ast.literal_eval(input('Please, enter the exchange rate:'))
+print(f'The total amount of dollars: {insert_coin * insert_rate}')
