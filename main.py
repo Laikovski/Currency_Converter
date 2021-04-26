@@ -1,5 +1,13 @@
 import ast
-# print('Meet a conicoin!')
-insert_coin = int(input('Please, enter the number of conicoins you have: '))
-insert_rate = ast.literal_eval(input('Please, enter the exchange rate:'))
-print(f'The total amount of dollars: {insert_coin * insert_rate}')
+
+currency = {
+    'RUB': 2.98,
+    'ARS': 0.82,
+    'HNL': 0.17,
+    'AUD': 1.9622,
+    'MAD': 0.208
+}
+insert = ast.literal_eval(input())
+
+for item in currency:
+    print(f'I will get {round(currency[item] * insert, 2)} {item} from the sale of {insert} conicoins.')
