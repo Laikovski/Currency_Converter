@@ -1,1 +1,5 @@
-print('Meet a conicoin!')
+# print('Meet a conicoin!')
+insert_coin = int(input())
+print(f'I have {insert_coin} conicoins.')
+print(f'{insert_coin} conicoins cost {insert_coin * 100} dollars.')
+print('I am rich! Yippee!')
