@@ -3,3 +3,4 @@
 ### Stage 3/6: More interaction
 ### Stage 4/6: Going global
 ### Stage 5/6: JSON and the Rates
+### Stage 6/6: Last but not least 
